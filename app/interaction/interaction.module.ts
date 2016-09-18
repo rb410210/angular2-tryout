@@ -8,4 +8,6 @@ import { StudentComponent }  from './interaction.component.student';
     declarations: [ MasterComponent, StudentComponent ],
     exports: [ MasterComponent ]
 })
-export class InteractionModule {}
+export class InteractionModule {
+    
+}
