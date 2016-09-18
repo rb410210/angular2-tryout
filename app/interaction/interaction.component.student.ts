@@ -5,6 +5,6 @@ import { Component, Input } from '@angular/core';
     templateUrl: './app/interaction/interaction.component.student.html'
 })
 export class StudentComponent {
-    @Input('student-name') student: string;
+    @Input('student-name') studentName: string;
     @Input('master') master: string;
 }
