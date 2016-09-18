@@ -9,6 +9,8 @@ export class MasterComponent {
 	master: string = 'Chutiya Master';
 	students: Person[] = [
 		{ id: 1, name: 'Mr. IQ' },
-		{ id: 2, name: 'Magneta' },
-		{ id: 3, name: 'Bombasto' }];
+		{ name: 'Magneta' },
+		{ id: 3, name: 'Bombasto' },
+		{ id: 4, name: 'Last Bencher' }
+		];
 }

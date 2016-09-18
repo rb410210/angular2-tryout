@@ -5,9 +5,10 @@ import { AppComponent }  from './app.component';
 import { CoursesComponent } from './courses.component';
 import { AutoGrowDirective } from './autogrow.directive';
 import { InteractionModule }  from './interaction/interaction.module';
+import { ContactModule }  from './contact/contact.module';
 
 @NgModule({
-  imports: [ BrowserModule, InteractionModule ],
+  imports: [ BrowserModule, InteractionModule, ContactModule ],
   declarations: [ AppComponent, CoursesComponent, AutoGrowDirective ],
   bootstrap: [ AppComponent ]
 })
