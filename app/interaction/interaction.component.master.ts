@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { Person } from './interaction.person';
 
 @Component({
+    moduleId: module.id,
 	selector: 'interaction-master',
-	templateUrl: './app/interaction/interaction.component.master.html'
+	templateUrl: 'interaction.component.master.html'
 })
 export class MasterComponent {
 	master: string = 'Chutiya Master';
