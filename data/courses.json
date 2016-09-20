@@ -1,1 +1,3 @@
-["Course1", "Course2", "Course3"]
+{
+    "courses": ["Course1", "Course2", "Course3"]
+}

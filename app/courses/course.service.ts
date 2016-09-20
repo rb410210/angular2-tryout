@@ -13,7 +13,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class CourseService {
     constructor(private http: Http) { }
-    private coursesUrl = 'app/data/courses/courses.json';
+    private coursesUrl = 'data/courses.json';
 
     getCourses(): Observable<string[]> {
         //return ["Course1", "Course2", "Course3"];
