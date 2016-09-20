@@ -12,7 +12,7 @@ export class MasterComponent {
 	constructor(private route: ActivatedRoute,
   private router: Router){}
 
-	master: string = 'Chutiya Master';
+	master: string = 'Sir jee';
 	students: Person[] = [
 		{ id: 1, name: 'Mr. IQ' },
 		{ name: 'Magneta' },
