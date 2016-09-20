@@ -18,6 +18,8 @@ export class CoursesComponent {
     courses: string[] = null;
 
     constructor(courseService: CourseService) {
-        this.courses = courseService.getCourses();
+        courseService.getCourses().subscribe(
+                     courses => this.courses = courses,
+                     error =>  this.title = <any>error);
     }
 }
