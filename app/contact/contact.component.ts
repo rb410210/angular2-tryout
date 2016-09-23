@@ -1,28 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Contact, ContactService } from './contact.service';
-import { UserService } from '../user/user.service';
+import { UserManager } from '../user/user.manager';
 @Component({
     moduleId: module.id,
     selector: 'app-contact',
     templateUrl: 'contact.component.html',
     styleUrls: ['contact.component.css'],
-    providers: [ContactService, UserService]
+    providers: [ContactService]
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy {
     contact: Contact;
     contacts: Contact[];
     msg = 'Loading contacts ...';
     userName = '';
-    constructor(private contactService: ContactService, userService: UserService) {
-        this.userName = userService.userName;
+    constructor(private contactService: ContactService) {
+        this.userName = UserManager.getInstance().userName;
     }
+
     ngOnInit() {
+        console.log('On Init');
+        
         this.contactService.getContacts().then(contacts => {
             this.msg = '';
             this.contacts = contacts;
             this.contact = contacts[0];
         });
     }
+
+    ngOnDestroy() {
+        console.log('On Destroy');
+    }
+
     next() {
         let ix = 1 + this.contacts.indexOf(this.contact);
         if (ix >= this.contacts.length) { ix = 0; }
